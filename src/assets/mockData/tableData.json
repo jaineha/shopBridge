@@ -1,0 +1,6 @@
+{
+    "tableData":[
+            {"id": 1, "name": "Mobile", "description": "abcd", "price": 800},
+            {"id": 2, "name": "Laptop", "description": "abcd", "price": 900}
+    ]
+}

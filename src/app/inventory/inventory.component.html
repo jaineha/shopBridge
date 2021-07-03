@@ -1,0 +1,43 @@
+<mat-card class="newInventoryData">
+    <div class="row header">
+        <mat-label class="col-md-7 label">{{inventoryData.value}} Inventory</mat-label>
+        <div class="col-md-4">
+            <img mat-button mat-dialog-close src="assets\icon\close.svg" class="closePopup">
+        </div>
+    </div>
+    <img src="assets\icon\line.svg">
+   <div class="newactionForm">
+        <table class="inventoryForm">
+            <tr>
+                <td class="row tdClass" *ngIf ="inventoryData.value !='new'">
+                    <mat-label class="col-md-6 sublabel">Id</mat-label>
+                    <input matInput class="col-md-4" [(ngModel)]="inventoryId" #Id="ngModel" name="inventoryId" required
+                        placeholder="ID" [readonly]="inventoryData.value !='new' ? true : false">
+                </td>
+            </tr>
+            <tr>
+                <td class="row tdClass">
+                    <mat-label class="col-md-6 sublabel">Name<span class="alertMessage">*</span></mat-label>
+                    <input matInput class="col-md-4" [(ngModel)]="inventoryName" #name="ngModel" name="inventoryName" required
+                        placeholder="Name">
+                </td>
+            </tr>
+            <tr class="row tdClass">
+                <mat-label class="col-md-6 sublabel">Description <span class="alertMessage">*</span> </mat-label><br>
+                <div class="col-md-4" >
+                    <textarea matInput [(ngModel)]="description" #issHeading="ngModel" maxlength="500" placeholder=""></textarea>
+                </div>
+            </tr>
+            <tr>
+                <td class="row tdClass">
+                    <mat-label class="col-md-6 sublabel">Price<span class="alertMessage">*</span></mat-label>
+                    <input matInput type="number" class="col-md-4" [(ngModel)]="inventoryPrice" #price="ngModel" name="inventoryPrice" required
+                        placeholder="Price">
+                </td>
+            </tr>
+        </table>
+        <mat-card class="submitButton">
+            <button id="submit" mat-stroked-button color="primary" class="mat-primary" (click)="onSubmit(inventoryData.value)">SUBMIT</button>
+        </mat-card>
+    </div>
+</mat-card>

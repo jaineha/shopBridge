@@ -1,0 +1,65 @@
+@import "../../assets/css/appMain.css";
+
+::ng-deep .mat-dialog-container{
+    border-radius: 0px;
+    padding: 0px;
+}
+
+
+.newInventoryData{
+    border: solid 2px #017980;
+    border-radius: 0;
+}
+
+.label{
+    color: #8e8e8e;
+    font-size: 1.5rem;
+    margin-left: 1%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.sublabel{
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closePopup{
+    float: right;
+}
+
+.newInventoryForm{
+    /* height: 19em; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+table.inventoryForm{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 99%;
+}
+
+textarea{
+    width: 115%;
+    background: #1B1D26;
+    color: #ffffff;
+}
+
+#submit{
+    width: 9rem;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.submitButton{
+    justify-content: center;
+    display: flex;
+}
